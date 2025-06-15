@@ -1,0 +1,32 @@
+# Development Dockerfile - Faster builds, includes SDK for hot reload
+FROM mcr.microsoft.com/dotnet/sdk:9.0
+WORKDIR /app
+
+# Install dev tools
+RUN dotnet tool install --global dotnet-ef
+ENV PATH="$PATH:/root/.dotnet/tools"
+
+# Copy project files
+COPY ["BelgiumVatChecker.sln", "./"]
+COPY ["BelgiumVatChecker.Core/BelgiumVatChecker.Core.csproj", "BelgiumVatChecker.Core/"]
+COPY ["BelgiumVatChecker.Api/BelgiumVatChecker.Api.csproj", "BelgiumVatChecker.Api/"]
+COPY ["BelgiumVatChecker.Tests/BelgiumVatChecker.Tests.csproj", "BelgiumVatChecker.Tests/"]
+
+# Restore dependencies
+RUN dotnet restore
+
+# Copy source code
+COPY . .
+
+# Expose ports
+EXPOSE 5000 5001
+
+# Set environment
+ENV ASPNETCORE_ENVIRONMENT=Development
+ENV ASPNETCORE_URLS="http://+:5000;https://+:5001"
+
+# Enable hot reload
+ENV DOTNET_USE_POLLING_FILE_WATCHER=true
+
+# Start with hot reload support
+ENTRYPOINT ["dotnet", "watch", "run", "--project", "BelgiumVatChecker.Api/BelgiumVatChecker.Api.csproj", "--no-launch-profile"]

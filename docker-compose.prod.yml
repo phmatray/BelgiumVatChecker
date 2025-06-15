@@ -1,0 +1,33 @@
+services:
+  belgium-vat-checker:
+    image: belgium-vat-checker:latest
+    ports:
+      - "80:8080"
+      - "443:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - ASPNETCORE_URLS=http://+:8080;https://+:8081
+      # Add your production settings here
+      # - ConnectionStrings__DefaultConnection=Server=...
+      # - Logging__LogLevel__Default=Warning
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/vat/status"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    restart: always
+    networks:
+      - vat-checker-network
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 512M
+        reservations:
+          cpus: '0.5'
+          memory: 256M
+
+networks:
+  vat-checker-network:
+    driver: bridge

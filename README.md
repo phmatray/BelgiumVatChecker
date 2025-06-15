@@ -14,7 +14,8 @@ A .NET 9 Web API for validating Belgian and EU VAT numbers using the VIES (VAT I
 
 ## Prerequisites
 
-- .NET 9 SDK
+- .NET 9 SDK (for local development)
+- Docker (for containerized deployment)
 - Visual Studio 2022 or VS Code (optional)
 
 ## Getting Started
@@ -46,7 +47,61 @@ cd BelgiumVatChecker.Api
 dotnet run
 ```
 
-The API will start on `https://localhost:5001` (or `http://localhost:5000`).
+The API will start on `https://localhost:7097` (or `http://localhost:5057`).
+
+## Docker Deployment
+
+### Quick Start with Docker
+
+1. Build the Docker image:
+```bash
+./scripts/docker-build.sh
+# Or manually:
+docker build -t belgium-vat-checker:latest .
+```
+
+2. Run the container:
+```bash
+./scripts/docker-run.sh
+# Or manually:
+docker run -d --name belgium-vat-checker -p 5000:8080 -p 5001:8081 belgium-vat-checker:latest
+```
+
+3. Access the API:
+- HTTP: http://localhost:5000
+- HTTPS: https://localhost:5001
+- Swagger UI: http://localhost:5000/swagger
+
+### Docker Compose
+
+For development:
+```bash
+docker-compose up -d
+```
+
+For production:
+```bash
+docker-compose -f docker-compose.prod.yml up -d
+```
+
+### Docker Commands
+
+```bash
+# View logs
+docker logs -f belgium-vat-checker
+
+# Stop the container
+docker stop belgium-vat-checker
+
+# Start the container
+docker start belgium-vat-checker
+
+# Remove the container
+docker rm -f belgium-vat-checker
+
+# Check container status
+docker ps | grep belgium-vat-checker
+```
 
 ## API Endpoints
 

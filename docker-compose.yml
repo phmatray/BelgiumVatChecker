@@ -1,0 +1,25 @@
+services:
+  belgium-vat-checker:
+    image: belgium-vat-checker:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:8080;https://+:8081
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/vat/status"]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 10s
+    restart: unless-stopped
+    networks:
+      - vat-checker-network
+
+networks:
+  vat-checker-network:
+    driver: bridge
