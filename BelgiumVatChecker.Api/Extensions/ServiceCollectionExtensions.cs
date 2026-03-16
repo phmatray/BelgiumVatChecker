@@ -1,6 +1,6 @@
 using BelgiumVatChecker.Core.Interfaces;
 using BelgiumVatChecker.Core.Services;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using Polly;
 using Polly.Extensions.Http;
 
