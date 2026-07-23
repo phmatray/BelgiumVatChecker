@@ -2,6 +2,20 @@
 
 # Belgium VAT Checker API
 
+<!-- portfolio-badges:start -->
+<!-- Identity -->
+[![phmatray - BelgiumVatChecker](https://img.shields.io/static/v1?label=phmatray&message=BelgiumVatChecker&color=blue&logo=github)](https://github.com/phmatray/BelgiumVatChecker)
+![Top language](https://img.shields.io/github/languages/top/phmatray/BelgiumVatChecker)
+[![Stars](https://img.shields.io/github/stars/phmatray/BelgiumVatChecker?style=social)](https://github.com/phmatray/BelgiumVatChecker/stargazers)
+[![Forks](https://img.shields.io/github/forks/phmatray/BelgiumVatChecker?style=social)](https://github.com/phmatray/BelgiumVatChecker/network/members)
+
+<!-- Activity -->
+[![Issues](https://img.shields.io/github/issues/phmatray/BelgiumVatChecker)](https://github.com/phmatray/BelgiumVatChecker/issues)
+[![Pull requests](https://img.shields.io/github/issues-pr/phmatray/BelgiumVatChecker)](https://github.com/phmatray/BelgiumVatChecker/pulls)
+[![Last commit](https://img.shields.io/github/last-commit/phmatray/BelgiumVatChecker)](https://github.com/phmatray/BelgiumVatChecker/commits)
+<!-- portfolio-badges:end -->
+
+
 A .NET 9 Web API for validating Belgian and EU VAT numbers using the VIES (VAT Information Exchange System) service.
 
 ## Features
