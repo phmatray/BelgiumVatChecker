@@ -15,6 +15,26 @@
 [![Last commit](https://img.shields.io/github/last-commit/phmatray/BelgiumVatChecker)](https://github.com/phmatray/BelgiumVatChecker/commits)
 <!-- portfolio-badges:end -->
 
+<!-- portfolio-toc:start -->
+
+## Table of Contents
+
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#getting-started)
+- [Docker Deployment](#docker-deployment)
+- [API Endpoints](#api-endpoints)
+- [Belgian VAT Number Format](#belgian-vat-number-format)
+- [Architecture](#architecture)
+- [Error Handling](#error-handling)
+- [Configuration](#configuration)
+- [Testing](#testing)
+- [Limitations](#limitations)
+- [Handling VIES Service Unavailability](#handling-vies-service-unavailability)
+
+<!-- portfolio-toc:end -->
+
+
 
 A .NET 9 Web API for validating Belgian and EU VAT numbers using the VIES (VAT Information Exchange System) service.
 
