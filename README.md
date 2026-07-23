@@ -280,6 +280,22 @@ Example error response when VIES is down:
   "errorMessage": "VIES service is temporarily unavailable (503). Please try again later."
 }
 
+<!-- portfolio-techstack:start -->
+
+## Tech Stack
+
+- **.NET 10**
+- Microsoft.AspNetCore.OpenApi
+- Microsoft.OpenApi
+- Polly
+- Polly.Extensions.Http
+- Swashbuckle.AspNetCore
+- System.ServiceModel.Http
+- System.ServiceModel.Primitives
+- Microsoft.Extensions.Http.Polly
+
+<!-- portfolio-techstack:end -->
+
 ## Contributing
 
 1. Fork the repository
