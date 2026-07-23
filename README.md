@@ -1,3 +1,5 @@
+![BelgiumVatChecker banner](.github/banner.png)
+
 # Belgium VAT Checker API
 
 A .NET 9 Web API for validating Belgian and EU VAT numbers using the VIES (VAT Information Exchange System) service.
