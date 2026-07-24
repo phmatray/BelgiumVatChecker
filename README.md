@@ -8,6 +8,7 @@
 ![Top language](https://img.shields.io/github/languages/top/phmatray/BelgiumVatChecker)
 [![Stars](https://img.shields.io/github/stars/phmatray/BelgiumVatChecker?style=social)](https://github.com/phmatray/BelgiumVatChecker/stargazers)
 [![Forks](https://img.shields.io/github/forks/phmatray/BelgiumVatChecker?style=social)](https://github.com/phmatray/BelgiumVatChecker/network/members)
+[![License](https://img.shields.io/github/license/phmatray/BelgiumVatChecker)](https://github.com/phmatray/BelgiumVatChecker/blob/HEAD/LICENSE)
 
 <!-- Activity -->
 [![Issues](https://img.shields.io/github/issues/phmatray/BelgiumVatChecker)](https://github.com/phmatray/BelgiumVatChecker/issues)
