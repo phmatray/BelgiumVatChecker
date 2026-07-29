@@ -341,3 +341,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 - EU VIES Service: https://ec.europa.eu/taxation_customs/vies/
 - Belgian VAT Information: https://finances.belgium.be/
+
+<!-- portfolio-nugetkeep:start -->
+---
+Built by [Atypical Consulting](https://www.atypical.consulting). We also make
+[NuGetKeep](https://nugetkeep.com/?utm_source=github-readme&utm_medium=readme&utm_campaign=launch-2026-07),
+a self-hosted NuGet server with supply-chain quarantine.
+<!-- portfolio-nugetkeep:end -->
